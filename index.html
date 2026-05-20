@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0A">
+  <title>Dyfonte Camisetas | Atacado para Todo o Brasil</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dyfonte Camisetas | Atacado para Todo o Brasil">
+  <meta property="og:description" content="Confecção própria com qualidade premium e preço de atacado real. Alta margem de lucro na revenda.">
+  <meta property="og:type" content="website">
+
+  <!-- Preload LCP (imagem maior acima da dobra) -->
+  <link rel="preload" as="image" href="./dyfontelojistashtml_files/thumb.webp" fetchpriority="high" type="image/webp">
+  <!-- Preload logo (acima da dobra) -->
+  <link rel="preload" as="image" href="./dyfontelojistashtml_files/logo-dy.webp" fetchpriority="high" type="image/webp">
+
+  <!-- Google Fonts — NÃO bloqueia render (print trick) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@900&display=swap"></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C06A;
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --gray: #AAAAAA;
+    }
+
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+    body {
+      background-color: var(--black);
+      color: var(--white);
+      /* Fallback imediato; Montserrat carrega async */
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid rgba(201,168,76,0.18);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px 48px;
+      padding-bottom: calc(48px + env(safe-area-inset-bottom));
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 24px auto 0;
+      width: fit-content;
+      padding: 6px 16px;
+      border: 1.5px solid var(--gold);
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .headline {
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(22px, 6.5vw, 28px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .headline span { color: var(--gold); display: block; }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 18px auto;
+    }
+
+    .subheadline {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    .subheadline strong { color: var(--white); font-weight: 700; }
+
+    .video-wrap {
+      margin-top: 24px;
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(201,168,76,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      background: #000;
+      aspect-ratio: 16/9;
+    }
+
+    .video-thumb-link {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      background: none;
+      border: none;
+      padding: 0;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-thumb-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 45px;
+      opacity: 0.92;
+      pointer-events: none;
+    }
+
+    .trust-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cta-wrap { margin-top: 24px; }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 56px;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #C9A84C 0%, #E2C06A 50%, #C9A84C 100%);
+      background-size: 200% 100%;
+      border: none;
+      border-radius: 5px;
+      color: #0A0A0A;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .cta-btn:active {
+      background-position: 100% 0;
+      box-shadow: 0 2px 10px rgba(201,168,76,0.3);
+    }
+
+    .cta-btn svg { width: 19px; height: 19px; flex-shrink: 0; }
+
+    .footer-note {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 11px;
+      color: #555;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 360px) {
+      .headline { font-size: 20px; }
+      .trust-bar { gap: 8px; }
+      .trust-item { font-size: 10px; }
+      .cta-btn { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <picture>
+    <source srcset="./dyfontelojistashtml_files/logo-dy.webp" type="image/webp">
+    <img class="logo" src="./dyfontelojistashtml_files/logo-dy.png" alt="Dyfonte Camisetas" width="80" height="80" fetchpriority="high">
+  </picture>
+</header>
+
+<main class="wrapper">
+
+  <div class="badge">
+    <span aria-hidden="true">🇧🇷</span>
+    ATACADO PARA TODO O BRASIL
+  </div>
+
+  <h1 class="headline">
+    Chega de fornecedor que
+    <span>te deixa na mão</span>
+    e queima seu lucro
+  </h1>
+
+  <div class="divider"></div>
+
+  <p class="subheadline">
+    Aqui você encontra as melhores peças do mercado, com <strong>alta qualidade e preço justo</strong>, garantindo <strong>margem de lucro</strong> na revenda.
+  </p>
+
+  <div class="video-wrap" id="videoWrap">
+    <button class="video-thumb-link" onclick="playVideo()" aria-label="Reproduzir vídeo">
+      <picture>
+        <source srcset="./dyfontelojistashtml_files/thumb.webp" type="image/webp">
+        <img
+          src="./dyfontelojistashtml_files/maxresdefault.jpg"
+          alt="Assista ao vídeo"
+          class="video-thumb-img"
+          width="480"
+          height="270"
+          fetchpriority="high"
+          decoding="async"
+        >
+      </picture>
+      <div class="play-btn" aria-hidden="true">
+        <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+          <path d="M45 24L27 14v20" fill="white"/>
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-item"><span aria-hidden="true">🚚</span> Envio em 24 horas</div>
+    <div class="trust-item"><span aria-hidden="true">📲</span> Pedidos via vídeo chamada ou catálogo 100% atualizado</div>
+    <div class="trust-item"><span aria-hidden="true">🕐</span> Atendimento 24h</div>
+  </div>
+
+  <div class="cta-wrap">
+    <a href="https://chat.whatsapp.com/KCHONQtCt9T2ri2HLcqo6p?mode=gi_t" class="cta-btn" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      Entrar no Grupo VIP
+    </a>
+  </div>
+
+
+</main>
+
+<script>
+function playVideo() {
+  var wrap = document.getElementById('videoWrap');
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/BRaUk1hggGA?autoplay=1&rel=0&playsinline=1';
+  iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+  iframe.allowFullscreen = true;
+  iframe.title = 'Dyfonte Camisetas';
+  wrap.innerHTML = '';
+  wrap.appendChild(iframe);
+}
+</script>
+
+<!-- Meta Pixel — diferido para não bloquear FCP/LCP -->
+<script>
+window.addEventListener('load', function() {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','554368791091735');
+  fbq('track','PageView');
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=554368791091735&ev=PageView&noscript=1"/></noscript>
+
+</body>
+</html>
